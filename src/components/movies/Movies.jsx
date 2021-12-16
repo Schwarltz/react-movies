@@ -6,13 +6,15 @@ import Row from 'react-bootstrap/Row';
 import MovieCard from './movie-card/Movie-Card';
 import { getLatest }  from '../../services/latest';
 
+import './Movies.scss';
 
 
 const Movies = () => {
     const [movies, setMovies] = useState(null);
+
     useEffect(() => {
         let mounted = true;
-        getLatest()
+        getLatest(1)
           .then(items => {
             if(mounted) {
               setMovies(items)
@@ -20,12 +22,13 @@ const Movies = () => {
           })
         return () => mounted = false;
     })
+
     return <>
-        <p>Latest Movies</p>
-        <Container>
-          <Row>
+        <h1>Latest Movies</h1>
+        <Container bsPrefix="moviesGrid">
+          
             {movies != null ? movies.results.map(movie => <MovieCard key={movie.title} details={movie} />) : <p>Loading</p>}
-          </Row>
+          
           
         </Container>
         

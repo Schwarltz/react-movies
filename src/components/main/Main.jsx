@@ -4,7 +4,6 @@ import Movies from '../movies/Movies';
 function Main() {
     return ( <>
         <Header/>
-        <h1>Hello World!</h1>
         <Movies/>
     </>)
 }

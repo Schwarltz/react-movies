@@ -9,8 +9,8 @@ function Header() {
     return <Navbar bg="light" expand="lg">
     <Container>
       <Navbar.Brand href="#home">React-Movies</Navbar.Brand>
-      {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
-      {/* <Navbar.Collapse id="basic-navbar-nav">
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
           <Nav.Link href="#home">Home</Nav.Link>
           <Nav.Link href="#link">Link</Nav.Link>
@@ -22,7 +22,7 @@ function Header() {
             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
           </NavDropdown>
         </Nav>
-      </Navbar.Collapse> */}
+      </Navbar.Collapse>
     </Container>
   </Navbar>
 }
