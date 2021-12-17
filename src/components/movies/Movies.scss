@@ -1,5 +1,16 @@
 .moviesGrid {
+    padding:0px 2em;
     display: flex; 
     flex-wrap : wrap;
     justify-content: center;
 }
+
+.page-item.active .page-link {
+    background-color: #212529
+}
+
+.pagination {
+    border-color: #212529;
+    background-color: #212529
+}
+

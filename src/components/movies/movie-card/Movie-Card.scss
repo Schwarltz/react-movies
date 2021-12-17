@@ -1,5 +1,115 @@
 .movieCard {
     width: 300px;
-    padding: 2rem;
+    // margin: 0.5rem;
+    margin: 1rem 1.5rem;
+    border-width: 0.5rem;
+    border-color: white;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container {
+    padding:0px;
+}
+
+.card-img {
+    border-bottom-left-radius: 0; 
+    border-bottom-right-radius: 0; 
+}
+
+.card-body {
+    margin-top: -3px;
+    background-color: #212529;
     border-radius: 3px;
 }
+
+.movieTitle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 0.2rem;
+}
+
+.container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    transition: .3s ease-out;
+    opacity:0;
+    background-color: rgba(0,0,0,0);
+
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+
+  
+.container:hover .overlay {
+    background-color: rgba(0,0,0,0.8);
+    opacity:1;
+}
+
+.moreInfo {
+    background-color: rgba(0,0,0,0);
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-style: solid; 
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.moreInfo:hover {
+    border-color: #0d6efd;
+    color: #0d6efd;
+    transition: .3s ease;
+}
+
+.vote {
+    position: absolute;
+    top: 0;
+    right:0;
+    
+    padding: 0.5rem;
+    margin: 3px;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+    &-low {
+        @extend .vote;
+        background-color: #c52525;
+    }
+
+    &-med {
+        @extend .vote;
+        background-color: #ddd01f;
+    }
+
+    &-high {
+        @extend .vote;
+        background-color: #2ac525;
+    }
+}
+
+.voteLow {
+    
+}
+
+.overview {
+    margin-top: 3rem;
+}
+
