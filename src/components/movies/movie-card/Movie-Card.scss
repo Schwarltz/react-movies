@@ -30,7 +30,7 @@
     padding-bottom: 0.2rem;
 }
 
-.container {
+.containerCard {
     position: relative;
 }
 
@@ -52,7 +52,7 @@
 
 
   
-.container:hover .overlay {
+.containerCard:hover .overlay {
     background-color: rgba(0,0,0,0.8);
     opacity:1;
 }
